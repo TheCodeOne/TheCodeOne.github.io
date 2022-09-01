@@ -1,0 +1,101 @@
+$main-color: dimgrey;
+$eye-height: 100px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $main-color;
+}
+
+a {
+  color: bisque;
+}
+
+#root {
+  height: 100%;
+}
+
+.eyes-follow-tired {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: $eye-height;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .eyelid {
+      position: absolute;
+      width: 220px;
+      height: $eye-height;
+      background-color: $main-color;
+      z-index: 400;
+      top: -120px;
+      animation: blink 4.5s infinite ease-in alternate;
+      animation-delay: 1s;
+    }
+    @keyframes blink {
+      0% {
+        top: -120px;
+      }
+      95% {
+        top: -120px;
+      }
+      100% {
+        top: -50px;
+      }
+    }
+
+    .eyes {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .eye {
+        border-radius: 50%;
+        height: 90px;
+        width: 90px;
+        background-color: #f3efef;
+
+        .pupil {
+          position: absolute;
+          background-color: #382e25;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          left: 50px;
+          top: 35px;
+        }
+      }
+    }
+  }
+}
+
+.contact-container {
+  height: calc(100% - $eye-height - 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+
+  .row {
+    width: auto;
+    text-align: center;
+
+    .header {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}

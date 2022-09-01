@@ -1,0 +1,32 @@
+{
+  "name": "page",
+  "version": "1.0.0",
+  "license": "CC-PDDC",
+  "description": "",
+  "main": "index.jsx",
+  "homepage": "https://thecodeone.github.io",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-mighty-mouse": "1.4.31",
+    "react-scripts": "5.0.1",
+    "sass": "^1.54.8"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -m 'Deploy to GitHub Pages'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
