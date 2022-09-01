@@ -16,10 +16,7 @@ function App() {
     },
   } = useMightyMouse(true, "right-eye", { x: 45, y: 45 });
 
-  const redEye =
-    (angleLeftEye < 30 || (angleLeftEye < 360 && angleLeftEye > 330)) &&
-    angleRightEye > 150 &&
-    angleRightEye < 210;
+  const redEye = (angleLeftEye < 30 || (angleLeftEye < 360 && angleLeftEye > 330)) && angleRightEye > 150 && angleRightEye < 210;
 
   const styleLeftEye = {
     transform: `rotate(${-angleLeftEye}deg)`,
@@ -56,7 +53,7 @@ function App() {
             <p>
               👋 [at] kokkonias.de
               <br />
-              <a href="http://kokkonias.de/B244F545.asc">PGP public key</a>
+              <a href="https://kokkonias.de/B244F545.asc">PGP public key</a>
             </p>
           </div>
         </div>
